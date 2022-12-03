@@ -35,6 +35,7 @@ struct ViewSizeWidgetView : View {
     }
 }
 
+// MARK: - The Timeline Provider
 struct ViewSizeTimelineProvider: TimelineProvider {
     
     typealias EntryType = ViewSizeEntry
@@ -57,6 +58,7 @@ struct ViewSizeTimelineProvider: TimelineProvider {
 
 }
 
+// MARK: - The Widget Configuration
 @main
 struct ViewSizeWidget: Widget {
     let kind: String = "ViewSizeWidget"
