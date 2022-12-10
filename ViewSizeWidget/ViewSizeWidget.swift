@@ -76,6 +76,9 @@ struct ViewSizeWidget: Widget {
             .systemSmall,
             .systemMedium,
             .systemLarge,
+            .accessoryCircular,
+            .accessoryRectangular,
+            .accessoryInline,
         ])
     }
 }
