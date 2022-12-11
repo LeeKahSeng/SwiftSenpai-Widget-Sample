@@ -12,10 +12,14 @@
 		183798702938EE0200B15D98 /* ViewSizeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837986F2938EE0200B15D98 /* ViewSizeWidget.swift */; };
 		183798722938EE0400B15D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 183798712938EE0400B15D98 /* Assets.xcassets */; };
 		183798762938EE0400B15D98 /* ViewSizeWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 183798682938EE0100B15D98 /* ViewSizeWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		187E7E342943620B0000871A /* CircularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E7E332943620B0000871A /* CircularWidgetView.swift */; };
+		187E7E36294362320000871A /* InlineWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E7E35294362320000871A /* InlineWidgetView.swift */; };
+		187E7E38294362410000871A /* RectangularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E7E37294362410000871A /* RectangularWidgetView.swift */; };
 		18D1949A2938EC86007E343C /* SwiftSenpai_Widget_SampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D194992938EC86007E343C /* SwiftSenpai_Widget_SampleApp.swift */; };
 		18D1949C2938EC86007E343C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1949B2938EC86007E343C /* ContentView.swift */; };
 		18D1949E2938EC8A007E343C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D1949D2938EC8A007E343C /* Assets.xcassets */; };
 		18D194A12938EC8A007E343C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D194A02938EC8A007E343C /* Preview Assets.xcassets */; };
+		18D52AFF2945FDBD00BCA6E8 /* HomeScreenWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D52AFE2945FDBD00BCA6E8 /* HomeScreenWidgetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,11 +53,15 @@
 		1837986F2938EE0200B15D98 /* ViewSizeWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSizeWidget.swift; sourceTree = "<group>"; };
 		183798712938EE0400B15D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		183798732938EE0400B15D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		187E7E332943620B0000871A /* CircularWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularWidgetView.swift; sourceTree = "<group>"; };
+		187E7E35294362320000871A /* InlineWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineWidgetView.swift; sourceTree = "<group>"; };
+		187E7E37294362410000871A /* RectangularWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangularWidgetView.swift; sourceTree = "<group>"; };
 		18D194962938EC86007E343C /* SwiftSenpai-Widget-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftSenpai-Widget-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D194992938EC86007E343C /* SwiftSenpai_Widget_SampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSenpai_Widget_SampleApp.swift; sourceTree = "<group>"; };
 		18D1949B2938EC86007E343C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		18D1949D2938EC8A007E343C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18D194A02938EC8A007E343C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		18D52AFE2945FDBD00BCA6E8 /* HomeScreenWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenWidgetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,11 +96,23 @@
 		1837986E2938EE0200B15D98 /* ViewSizeWidget */ = {
 			isa = PBXGroup;
 			children = (
+				187E7E322943611C0000871A /* Widget View */,
 				1837986F2938EE0200B15D98 /* ViewSizeWidget.swift */,
 				183798712938EE0400B15D98 /* Assets.xcassets */,
 				183798732938EE0400B15D98 /* Info.plist */,
 			);
 			path = ViewSizeWidget;
+			sourceTree = "<group>";
+		};
+		187E7E322943611C0000871A /* Widget View */ = {
+			isa = PBXGroup;
+			children = (
+				187E7E37294362410000871A /* RectangularWidgetView.swift */,
+				187E7E332943620B0000871A /* CircularWidgetView.swift */,
+				187E7E35294362320000871A /* InlineWidgetView.swift */,
+				18D52AFE2945FDBD00BCA6E8 /* HomeScreenWidgetView.swift */,
+			);
+			path = "Widget View";
 			sourceTree = "<group>";
 		};
 		18D1948D2938EC86007E343C = {
@@ -235,6 +255,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				183798702938EE0200B15D98 /* ViewSizeWidget.swift in Sources */,
+				187E7E38294362410000871A /* RectangularWidgetView.swift in Sources */,
+				187E7E36294362320000871A /* InlineWidgetView.swift in Sources */,
+				187E7E342943620B0000871A /* CircularWidgetView.swift in Sources */,
+				18D52AFF2945FDBD00BCA6E8 /* HomeScreenWidgetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
