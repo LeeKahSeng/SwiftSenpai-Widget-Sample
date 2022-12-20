@@ -15,33 +15,35 @@ struct ViewSizeEntry: TimelineEntry {
 }
 
 // MARK: - The Widget View
-struct ViewSizeWidgetView : View {
-   
+struct ViewSizeWidgetView: View {
+
     let entry: ViewSizeEntry
 
+    // Obtain the widget family value
+    @Environment(\.widgetFamily)
+    var family
+
     var body: some View {
-        GeometryReader { geometry in
-            VStack {
-                
-                // Show view size
-                Text("\(Int(geometry.size.width)) x \(Int(geometry.size.height))")
-                    .font(.system(.title2, weight: .bold))
-                
-                // Show provider info
-                Text(entry.providerInfo)
-                    .font(.footnote)
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.green)
+
+        switch family {
+        case .accessoryRectangular:
+            RectangularWidgetView()
+        case .accessoryCircular:
+            CircularWidgetView()
+        case .accessoryInline:
+            InlineWidgetView()
+        default:
+            // UI for Home Screen widget
+            HomeScreenWidgetView(entry: entry)
         }
     }
 }
 
 // MARK: - The Timeline Provider
 struct ViewSizeTimelineProvider: TimelineProvider {
-    
+
     typealias Entry = ViewSizeEntry
-    
+
     func placeholder(in context: Context) -> Entry {
         // This data will be masked
         return ViewSizeEntry(date: Date(), providerInfo: "placeholder")
@@ -62,7 +64,7 @@ struct ViewSizeTimelineProvider: TimelineProvider {
 // MARK: - The Widget Configuration
 @main
 struct ViewSizeWidget: Widget {
-    
+
     var body: some WidgetConfiguration {
         StaticConfiguration(
             kind: "com.SwiftSenpaiDemo.ViewSizeWidget",
@@ -76,6 +78,11 @@ struct ViewSizeWidget: Widget {
             .systemSmall,
             .systemMedium,
             .systemLarge,
+
+            // Add Support to Lock Screen widgets
+            .accessoryCircular,
+            .accessoryRectangular,
+            .accessoryInline,
         ])
     }
 }
