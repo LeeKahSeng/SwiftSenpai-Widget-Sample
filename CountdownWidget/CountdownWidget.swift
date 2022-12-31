@@ -19,7 +19,25 @@ struct CountdownWidgetView: View {
     let entry: CountdownEntry
     
     var body: some View {
-        Text("Hello World")
+        VStack(spacing: 10) {
+            
+            Text(Date(), style: .relative)
+                .padding(4)
+                .font(.headline)
+                .multilineTextAlignment(.center)
+                .background(.red)
+            
+            Gauge(value: entry.guageValue, in: 0...70) {
+                Text("MPH")
+            } currentValueLabel: {
+                Text(entry.guageValue.formatted())
+            }
+            .gaugeStyle(.accessoryCircularCapacity)
+            
+            Text(entry.status)
+                .font(.caption)
+                .foregroundColor(Color(.systemGray))
+        }
     }
 }
 
@@ -31,7 +49,7 @@ struct CountdownTimelineProvider: TimelineProvider {
         return CountdownEntry(
             date: Date(),
             status: "Counting down...",
-            guageValue: 5.0
+            guageValue: 25.0
         )
     }
 
@@ -39,7 +57,7 @@ struct CountdownTimelineProvider: TimelineProvider {
         let entry = CountdownEntry(
             date: Date(),
             status: "Counting down...",
-            guageValue: 5.0
+            guageValue: 25.0
         )
         completion(entry)
     }
@@ -48,7 +66,7 @@ struct CountdownTimelineProvider: TimelineProvider {
         let entry = CountdownEntry(
             date: Date(),
             status: "Counting down...",
-            guageValue: 5.0
+            guageValue: 25.0
         )
         let timeline = Timeline(entries: [entry], policy: .never)
         completion(timeline)
