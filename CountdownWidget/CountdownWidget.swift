@@ -21,11 +21,25 @@ struct CountdownWidgetView: View {
     
     var body: some View {
         
-        Text(getFutureDate(), style: .relative)
-            .padding(4)
-            .font(.headline)
-            .multilineTextAlignment(.center)
-            .background(.red)
+        VStack(spacing: 10) {
+            
+            Text(getFutureDate(), style: .relative)
+                .padding(4)
+                .font(.headline)
+                .multilineTextAlignment(.center)
+                .background(.red)
+            
+            Gauge(value: entry.gaugeValue, in: 0...CGFloat(totalCountdown)) {
+                Text("countdown")
+            } currentValueLabel: {
+                Text(entry.gaugeValue.formatted())
+            }
+            .gaugeStyle(.accessoryCircularCapacity)
+            
+            Text(entry.status)
+                .font(.caption)
+                .foregroundColor(Color(.systemGray))
+        }
     }
     
     private func getFutureDate() -> Date {
@@ -58,12 +72,36 @@ struct CountdownTimelineProvider: TimelineProvider {
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         
-        let entry = CountdownEntry(
-            date: Date(),
-            status: "Counting down...",
-            gaugeValue: 25.0
-        )
-        let timeline = Timeline(entries: [entry], policy: .never)
+        let totalCountdown = CountdownWidget.totalCountdown
+        
+        // Entries required for 1 countdown session (60 seconds)
+        var entries = [CountdownEntry]()
+        
+        // Generate 61 entries to show countdown from 60 - 0
+        for i in 0...totalCountdown {
+            
+            // Determine widget refresh date & create an entry
+            let components = DateComponents(second: i)
+            let refreshDate = Calendar.current.date(byAdding: components, to: Date())!
+            
+            // Calculate gauge value
+            let gaugeValue = CGFloat(totalCountdown - i)
+            
+            // Determine status
+            // Status will become "Waiting..." when `gaugeValue` reached zero
+            let status = gaugeValue == 0 ? "Waiting refresh..." : "Counting down..."
+            
+            let entry = CountdownEntry(
+                date: refreshDate,
+                status: status,
+                gaugeValue: gaugeValue
+            )
+            
+            entries.append(entry)
+        }
+        
+        // Create a timeline using `entries`
+        let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
 }
