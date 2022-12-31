@@ -11,33 +11,27 @@ import SwiftUI
 struct CountdownEntry: TimelineEntry {
     let date: Date
     let status: String
-    let guageValue: CGFloat
+    let gaugeValue: CGFloat
 }
 
 struct CountdownWidgetView: View {
     
     let entry: CountdownEntry
+    let totalCountdown = CountdownWidget.totalCountdown
     
     var body: some View {
-        VStack(spacing: 10) {
-            
-            Text(Date(), style: .relative)
-                .padding(4)
-                .font(.headline)
-                .multilineTextAlignment(.center)
-                .background(.red)
-            
-            Gauge(value: entry.guageValue, in: 0...70) {
-                Text("MPH")
-            } currentValueLabel: {
-                Text(entry.guageValue.formatted())
-            }
-            .gaugeStyle(.accessoryCircularCapacity)
-            
-            Text(entry.status)
-                .font(.caption)
-                .foregroundColor(Color(.systemGray))
-        }
+        
+        Text(getFutureDate(), style: .relative)
+            .padding(4)
+            .font(.headline)
+            .multilineTextAlignment(.center)
+            .background(.red)
+    }
+    
+    private func getFutureDate() -> Date {
+        let components = DateComponents(second: totalCountdown + 1)
+        let futureDate = Calendar.current.date(byAdding: components, to: Date())!
+        return futureDate
     }
 }
 
@@ -49,7 +43,7 @@ struct CountdownTimelineProvider: TimelineProvider {
         return CountdownEntry(
             date: Date(),
             status: "Counting down...",
-            guageValue: 25.0
+            gaugeValue: 25.0
         )
     }
 
@@ -57,16 +51,17 @@ struct CountdownTimelineProvider: TimelineProvider {
         let entry = CountdownEntry(
             date: Date(),
             status: "Counting down...",
-            guageValue: 25.0
+            gaugeValue: 25.0
         )
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+        
         let entry = CountdownEntry(
             date: Date(),
             status: "Counting down...",
-            guageValue: 25.0
+            gaugeValue: 25.0
         )
         let timeline = Timeline(entries: [entry], policy: .never)
         completion(timeline)
@@ -76,6 +71,8 @@ struct CountdownTimelineProvider: TimelineProvider {
 @main
 struct CountdownWidget: Widget {
     
+    static let totalCountdown = 60
+
     let kind = "com.SwiftSenpaiDemo.CountdownWidgetView"
     
     var body: some WidgetConfiguration {
