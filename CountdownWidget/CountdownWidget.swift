@@ -23,7 +23,8 @@ struct CountdownWidgetView: View {
         
         VStack(spacing: 10) {
             
-            Text(getFutureDate(), style: .relative)
+            Text(getFutureDate(), style: .timer)
+                .monospacedDigit()
                 .padding(4)
                 .font(.headline)
                 .multilineTextAlignment(.center)
