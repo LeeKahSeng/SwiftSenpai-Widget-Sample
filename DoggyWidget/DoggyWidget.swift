@@ -1,0 +1,88 @@
+//
+//  DoggyWidget.swift
+//  DoggyWidget
+//
+//  Created by Kah Seng Lee on 23/01/2023.
+//
+
+import WidgetKit
+import SwiftUI
+
+struct DoggyEntry: TimelineEntry {
+    let date: Date
+    let image: UIImage
+}
+
+struct DoggyWidgetView: View {
+    
+    let entry: DoggyEntry
+    
+    var body: some View {
+        Image(uiImage: entry.image)
+            .resizable()
+            .scaledToFill()
+            .clipped()
+    }
+}
+
+struct DoggyTimelineProvider: TimelineProvider {
+
+    typealias Entry = DoggyEntry
+
+    func placeholder(in context: Context) -> Entry {
+        let sample = UIImage(named: "sample-doggy")!
+        return DoggyEntry(date: Date(), image: sample)
+    }
+
+    func getSnapshot(in context: Context, completion: @escaping (Entry) -> ()) {
+        let sample = UIImage(named: "sample-doggy")!
+        let entry = DoggyEntry(date: Date(), image: sample)
+        completion(entry)
+    }
+
+    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+        
+        Task {
+
+            // Fetch a ramdom doggy image from server
+            guard let image = try? await DoggyFetcher.fetchRandomDoggy() else {
+                return
+            }
+            
+            let entry = DoggyEntry(date: Date(), image: image)
+            
+            // Next fetch happen 90s later
+            let nextUpdate = Calendar.current.date(
+                byAdding: DateComponents(second: 90),
+                to: Date()
+            )!
+            
+            let timeline = Timeline(
+                entries: [entry],
+                policy: .after(nextUpdate)
+            )
+            
+            completion(timeline)
+        }
+    }
+}
+
+@main
+struct DoggyWidget: Widget {
+    
+    let kind = "com.SwiftSenpaiDemo.DoggyWidgetView"
+    
+    var body: some WidgetConfiguration {
+        StaticConfiguration(
+            kind: kind,
+            provider: DoggyTimelineProvider()
+        ) { entry in
+            DoggyWidgetView(entry: entry)
+        }
+        .configurationDisplayName("Doggy Widget")
+        .description("Unlimited doggy all day long.")
+        .supportedFamilies([
+            .systemSmall,
+        ])
+    }
+}
