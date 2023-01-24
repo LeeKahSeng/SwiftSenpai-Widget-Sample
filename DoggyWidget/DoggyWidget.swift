@@ -39,8 +39,10 @@ struct DoggyTimelineProvider: TimelineProvider {
         var snapshotDoggy: UIImage
         
         if context.isPreview && !DoggyFetcher.cachedDoggyAvailable {
+            // Use local sample image as snapshot if cached image not available
             snapshotDoggy = UIImage(named: "sample-doggy")!
         } else {
+            // Use cached image as snapshot
             snapshotDoggy = DoggyFetcher.cachedDoggy!
         }
         
