@@ -30,6 +30,10 @@ struct DoggyFetcher {
         return UIImage(data: imageData)
     }
     
+    static var cachedDoggyAvailable: Bool {
+        cachedDoggy != nil
+    }
+    
     static func fetchRandomDoggy() async throws -> UIImage {
 
         let url = URL(string: "https://dog.ceo/api/breeds/image/random")!

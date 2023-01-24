@@ -38,10 +38,10 @@ struct DoggyTimelineProvider: TimelineProvider {
         
         var snapshotDoggy: UIImage
         
-        if let cache = DoggyFetcher.cachedDoggy, context.isPreview  {
-            snapshotDoggy = cache
-        } else {
+        if context.isPreview && !DoggyFetcher.cachedDoggyAvailable {
             snapshotDoggy = UIImage(named: "sample-doggy")!
+        } else {
+            snapshotDoggy = DoggyFetcher.cachedDoggy!
         }
         
         let entry = DoggyEntry(date: Date(), image: snapshotDoggy)
