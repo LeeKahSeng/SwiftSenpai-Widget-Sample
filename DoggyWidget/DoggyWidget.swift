@@ -35,8 +35,16 @@ struct DoggyTimelineProvider: TimelineProvider {
     }
 
     func getSnapshot(in context: Context, completion: @escaping (Entry) -> ()) {
-        let sample = UIImage(named: "sample-doggy")!
-        let entry = DoggyEntry(date: Date(), image: sample)
+        
+        var snapshotDoggy: UIImage
+        
+        if let cache = DoggyFetcher.cachedDoggy, context.isPreview  {
+            snapshotDoggy = cache
+        } else {
+            snapshotDoggy = UIImage(named: "sample-doggy")!
+        }
+        
+        let entry = DoggyEntry(date: Date(), image: snapshotDoggy)
         completion(entry)
     }
 

@@ -19,6 +19,17 @@ struct DoggyFetcher {
         case imageDataCorrupted
     }
     
+    private static var cachePath: URL {
+        URL.cachesDirectory.appending(path: "doggy.png")
+    }
+    
+    static var cachedDoggy: UIImage? {
+        guard let imageData = try? Data(contentsOf: cachePath) else {
+            return  nil
+        }
+        return UIImage(data: imageData)
+    }
+    
     static func fetchRandomDoggy() async throws -> UIImage {
 
         let url = URL(string: "https://dog.ceo/api/breeds/image/random")!
@@ -32,10 +43,19 @@ struct DoggyFetcher {
         // Fetch image from URL
         let (imageData, _) = try await URLSession.shared.data(from: doggy.message)
         
+        // Spawn another task to cache the downloaded image
+        Task {
+            try? await cache(imageData)
+        }
+        
         guard let image = UIImage(data: imageData) else {
             throw DoggyFetcherError.imageDataCorrupted
         }
         
         return image
+    }
+    
+    private static func cache(_ imageData: Data) async throws {
+        try imageData.write(to: cachePath)
     }
 }
