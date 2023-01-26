@@ -54,16 +54,16 @@ struct DoggyTimelineProvider: TimelineProvider {
         
         Task {
 
-            // Fetch a ramdom doggy image from server
+            // Fetch a random doggy image from server
             guard let image = try? await DoggyFetcher.fetchRandomDoggy() else {
                 return
             }
             
             let entry = DoggyEntry(date: Date(), image: image)
             
-            // Next fetch happen 90s later
+            // Next fetch happens 15 minutes later
             let nextUpdate = Calendar.current.date(
-                byAdding: DateComponents(second: 90),
+                byAdding: DateComponents(minute: 15),
                 to: Date()
             )!
             
