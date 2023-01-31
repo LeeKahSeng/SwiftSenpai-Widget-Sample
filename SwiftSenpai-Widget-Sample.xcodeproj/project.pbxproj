@@ -12,6 +12,12 @@
 		183798702938EE0200B15D98 /* ViewSizeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837986F2938EE0200B15D98 /* ViewSizeWidget.swift */; };
 		183798722938EE0400B15D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 183798712938EE0400B15D98 /* Assets.xcassets */; };
 		183798762938EE0400B15D98 /* ViewSizeWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 183798682938EE0100B15D98 /* ViewSizeWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		18685FB4297EC8A500C690F7 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1837986A2938EE0100B15D98 /* WidgetKit.framework */; };
+		18685FB5297EC8A500C690F7 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1837986C2938EE0200B15D98 /* SwiftUI.framework */; };
+		18685FBC297EC8A500C690F7 /* DoggyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18685FBB297EC8A500C690F7 /* DoggyWidget.swift */; };
+		18685FBE297EC8A800C690F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18685FBD297EC8A800C690F7 /* Assets.xcassets */; };
+		18685FC2297EC8A800C690F7 /* DoggyWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 18685FB3297EC8A500C690F7 /* DoggyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		18685FC8297ED1EC00C690F7 /* DoggyFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18685FC6297ECF8800C690F7 /* DoggyFetcher.swift */; };
 		18701D56295EE28800CA0F1E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1837986A2938EE0100B15D98 /* WidgetKit.framework */; };
 		18701D57295EE28800CA0F1E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1837986C2938EE0200B15D98 /* SwiftUI.framework */; };
 		18701D5A295EE28800CA0F1E /* CountdownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18701D59295EE28800CA0F1E /* CountdownWidget.swift */; };
@@ -35,6 +41,13 @@
 			remoteGlobalIDString = 183798672938EE0100B15D98;
 			remoteInfo = ViewSizeWidgetExtension;
 		};
+		18685FC0297EC8A800C690F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18D1948E2938EC86007E343C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18685FB2297EC8A500C690F7;
+			remoteInfo = DoggyWidgetExtension;
+		};
 		18701D5E295EE29300CA0F1E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 18D1948E2938EC86007E343C /* Project object */;
@@ -53,6 +66,7 @@
 			files = (
 				18701D60295EE29300CA0F1E /* CountdownWidgetExtension.appex in Embed Foundation Extensions */,
 				183798762938EE0400B15D98 /* ViewSizeWidgetExtension.appex in Embed Foundation Extensions */,
+				18685FC2297EC8A800C690F7 /* DoggyWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +80,11 @@
 		1837986F2938EE0200B15D98 /* ViewSizeWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSizeWidget.swift; sourceTree = "<group>"; };
 		183798712938EE0400B15D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		183798732938EE0400B15D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18685FB3297EC8A500C690F7 /* DoggyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DoggyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		18685FBB297EC8A500C690F7 /* DoggyWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoggyWidget.swift; sourceTree = "<group>"; };
+		18685FBD297EC8A800C690F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18685FBF297EC8A800C690F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18685FC6297ECF8800C690F7 /* DoggyFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoggyFetcher.swift; sourceTree = "<group>"; };
 		18701D55295EE28800CA0F1E /* CountdownWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CountdownWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		18701D59295EE28800CA0F1E /* CountdownWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownWidget.swift; sourceTree = "<group>"; };
 		18701D5B295EE29300CA0F1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +108,15 @@
 			files = (
 				1837986D2938EE0200B15D98 /* SwiftUI.framework in Frameworks */,
 				1837986B2938EE0100B15D98 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18685FB0297EC8A500C690F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18685FB5297EC8A500C690F7 /* SwiftUI.framework in Frameworks */,
+				18685FB4297EC8A500C690F7 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +159,17 @@
 			path = ViewSizeWidget;
 			sourceTree = "<group>";
 		};
+		18685FB6297EC8A500C690F7 /* DoggyWidget */ = {
+			isa = PBXGroup;
+			children = (
+				18685FBB297EC8A500C690F7 /* DoggyWidget.swift */,
+				18685FC6297ECF8800C690F7 /* DoggyFetcher.swift */,
+				18685FBD297EC8A800C690F7 /* Assets.xcassets */,
+				18685FBF297EC8A800C690F7 /* Info.plist */,
+			);
+			path = DoggyWidget;
+			sourceTree = "<group>";
+		};
 		18701D58295EE28800CA0F1E /* CountdownWidget */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +197,7 @@
 				18D194982938EC86007E343C /* SwiftSenpai-Widget-Sample */,
 				1837986E2938EE0200B15D98 /* ViewSizeWidget */,
 				18701D58295EE28800CA0F1E /* CountdownWidget */,
+				18685FB6297EC8A500C690F7 /* DoggyWidget */,
 				183798692938EE0100B15D98 /* Frameworks */,
 				18D194972938EC86007E343C /* Products */,
 			);
@@ -169,6 +209,7 @@
 				18D194962938EC86007E343C /* SwiftSenpai-Widget-Sample.app */,
 				183798682938EE0100B15D98 /* ViewSizeWidgetExtension.appex */,
 				18701D55295EE28800CA0F1E /* CountdownWidgetExtension.appex */,
+				18685FB3297EC8A500C690F7 /* DoggyWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,6 +254,23 @@
 			productReference = 183798682938EE0100B15D98 /* ViewSizeWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		18685FB2297EC8A500C690F7 /* DoggyWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18685FC5297EC8A900C690F7 /* Build configuration list for PBXNativeTarget "DoggyWidgetExtension" */;
+			buildPhases = (
+				18685FAF297EC8A500C690F7 /* Sources */,
+				18685FB0297EC8A500C690F7 /* Frameworks */,
+				18685FB1297EC8A500C690F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DoggyWidgetExtension;
+			productName = DoggyWidgetExtension;
+			productReference = 18685FB3297EC8A500C690F7 /* DoggyWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		18701D54295EE28800CA0F1E /* CountdownWidgetExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18701D61295EE29300CA0F1E /* Build configuration list for PBXNativeTarget "CountdownWidgetExtension" */;
@@ -244,6 +302,7 @@
 			dependencies = (
 				183798752938EE0400B15D98 /* PBXTargetDependency */,
 				18701D5F295EE29300CA0F1E /* PBXTargetDependency */,
+				18685FC1297EC8A800C690F7 /* PBXTargetDependency */,
 			);
 			name = "SwiftSenpai-Widget-Sample";
 			productName = "SwiftSenpai-Widget-Sample";
@@ -257,11 +316,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					183798672938EE0100B15D98 = {
 						CreatedOnToolsVersion = 14.0.1;
+					};
+					18685FB2297EC8A500C690F7 = {
+						CreatedOnToolsVersion = 14.2;
 					};
 					18701D54295EE28800CA0F1E = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -287,6 +349,7 @@
 				18D194952938EC86007E343C /* SwiftSenpai-Widget-Sample */,
 				183798672938EE0100B15D98 /* ViewSizeWidgetExtension */,
 				18701D54295EE28800CA0F1E /* CountdownWidgetExtension */,
+				18685FB2297EC8A500C690F7 /* DoggyWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -297,6 +360,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				183798722938EE0400B15D98 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18685FB1297EC8A500C690F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18685FBE297EC8A800C690F7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +403,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		18685FAF297EC8A500C690F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18685FC8297ED1EC00C690F7 /* DoggyFetcher.swift in Sources */,
+				18685FBC297EC8A500C690F7 /* DoggyWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18701D51295EE28800CA0F1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,6 +436,11 @@
 			isa = PBXTargetDependency;
 			target = 183798672938EE0100B15D98 /* ViewSizeWidgetExtension */;
 			targetProxy = 183798742938EE0400B15D98 /* PBXContainerItemProxy */;
+		};
+		18685FC1297EC8A800C690F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18685FB2297EC8A500C690F7 /* DoggyWidgetExtension */;
+			targetProxy = 18685FC0297EC8A800C690F7 /* PBXContainerItemProxy */;
 		};
 		18701D5F295EE29300CA0F1E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -420,6 +505,62 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "yeos_lee dev profile";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		18685FC3297EC8A900C690F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QVEMCYHXHL;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DoggyWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DoggyWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LeeKahSeng.SwiftSenpai-Widget-Sample.DoggyWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18685FC4297EC8A900C690F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QVEMCYHXHL;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DoggyWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DoggyWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LeeKahSeng.SwiftSenpai-Widget-Sample.DoggyWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -667,6 +808,15 @@
 			buildConfigurations = (
 				183798782938EE0400B15D98 /* Debug */,
 				183798792938EE0400B15D98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18685FC5297EC8A900C690F7 /* Build configuration list for PBXNativeTarget "DoggyWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18685FC3297EC8A900C690F7 /* Debug */,
+				18685FC4297EC8A900C690F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
