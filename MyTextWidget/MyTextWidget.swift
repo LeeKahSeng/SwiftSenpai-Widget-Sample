@@ -9,10 +9,6 @@ import WidgetKit
 import SwiftUI
 import Intents
 
-import WidgetKit
-import SwiftUI
-import Intents
-
 struct MyTextEntry: TimelineEntry {
     let date: Date
     let myText: String
