@@ -26,6 +26,14 @@
 		187E7E342943620B0000871A /* CircularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E7E332943620B0000871A /* CircularWidgetView.swift */; };
 		187E7E36294362320000871A /* InlineWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E7E35294362320000871A /* InlineWidgetView.swift */; };
 		187E7E38294362410000871A /* RectangularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E7E37294362410000871A /* RectangularWidgetView.swift */; };
+		18C99767298E4E2D00EDE784 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1837986A2938EE0100B15D98 /* WidgetKit.framework */; };
+		18C99768298E4E2D00EDE784 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1837986C2938EE0200B15D98 /* SwiftUI.framework */; };
+		18C9976B298E4E2E00EDE784 /* MyTextWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9976A298E4E2E00EDE784 /* MyTextWidgetBundle.swift */; };
+		18C9976D298E4E2E00EDE784 /* MyTextWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9976C298E4E2E00EDE784 /* MyTextWidget.swift */; };
+		18C99770298E4E3D00EDE784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C9976F298E4E3D00EDE784 /* Assets.xcassets */; };
+		18C99772298E4E3D00EDE784 /* MyTextWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 18C9976E298E4E2E00EDE784 /* MyTextWidget.intentdefinition */; };
+		18C99773298E4E3E00EDE784 /* MyTextWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 18C9976E298E4E2E00EDE784 /* MyTextWidget.intentdefinition */; };
+		18C99776298E4E3E00EDE784 /* MyTextWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 18C99766298E4E2D00EDE784 /* MyTextWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		18D1949A2938EC86007E343C /* SwiftSenpai_Widget_SampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D194992938EC86007E343C /* SwiftSenpai_Widget_SampleApp.swift */; };
 		18D1949C2938EC86007E343C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1949B2938EC86007E343C /* ContentView.swift */; };
 		18D1949E2938EC8A007E343C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D1949D2938EC8A007E343C /* Assets.xcassets */; };
@@ -55,6 +63,13 @@
 			remoteGlobalIDString = 18701D54295EE28800CA0F1E;
 			remoteInfo = CountdownWidgetExtension;
 		};
+		18C99774298E4E3E00EDE784 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18D1948E2938EC86007E343C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18C99765298E4E2C00EDE784;
+			remoteInfo = MyTextWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,6 +80,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				18701D60295EE29300CA0F1E /* CountdownWidgetExtension.appex in Embed Foundation Extensions */,
+				18C99776298E4E3E00EDE784 /* MyTextWidgetExtension.appex in Embed Foundation Extensions */,
 				183798762938EE0400B15D98 /* ViewSizeWidgetExtension.appex in Embed Foundation Extensions */,
 				18685FC2297EC8A800C690F7 /* DoggyWidgetExtension.appex in Embed Foundation Extensions */,
 			);
@@ -93,6 +109,12 @@
 		187E7E332943620B0000871A /* CircularWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularWidgetView.swift; sourceTree = "<group>"; };
 		187E7E35294362320000871A /* InlineWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineWidgetView.swift; sourceTree = "<group>"; };
 		187E7E37294362410000871A /* RectangularWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangularWidgetView.swift; sourceTree = "<group>"; };
+		18C99766298E4E2D00EDE784 /* MyTextWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyTextWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		18C9976A298E4E2E00EDE784 /* MyTextWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextWidgetBundle.swift; sourceTree = "<group>"; };
+		18C9976C298E4E2E00EDE784 /* MyTextWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextWidget.swift; sourceTree = "<group>"; };
+		18C9976E298E4E2E00EDE784 /* MyTextWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = MyTextWidget.intentdefinition; sourceTree = "<group>"; };
+		18C9976F298E4E3D00EDE784 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18C99771298E4E3D00EDE784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D194962938EC86007E343C /* SwiftSenpai-Widget-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftSenpai-Widget-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D194992938EC86007E343C /* SwiftSenpai_Widget_SampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSenpai_Widget_SampleApp.swift; sourceTree = "<group>"; };
 		18D1949B2938EC86007E343C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +148,15 @@
 			files = (
 				18701D57295EE28800CA0F1E /* SwiftUI.framework in Frameworks */,
 				18701D56295EE28800CA0F1E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18C99763298E4E2C00EDE784 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18C99768298E4E2D00EDE784 /* SwiftUI.framework in Frameworks */,
+				18C99767298E4E2D00EDE784 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +222,18 @@
 			path = "Widget View";
 			sourceTree = "<group>";
 		};
+		18C99769298E4E2E00EDE784 /* MyTextWidget */ = {
+			isa = PBXGroup;
+			children = (
+				18C9976A298E4E2E00EDE784 /* MyTextWidgetBundle.swift */,
+				18C9976C298E4E2E00EDE784 /* MyTextWidget.swift */,
+				18C9976E298E4E2E00EDE784 /* MyTextWidget.intentdefinition */,
+				18C9976F298E4E3D00EDE784 /* Assets.xcassets */,
+				18C99771298E4E3D00EDE784 /* Info.plist */,
+			);
+			path = MyTextWidget;
+			sourceTree = "<group>";
+		};
 		18D1948D2938EC86007E343C = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +241,7 @@
 				1837986E2938EE0200B15D98 /* ViewSizeWidget */,
 				18701D58295EE28800CA0F1E /* CountdownWidget */,
 				18685FB6297EC8A500C690F7 /* DoggyWidget */,
+				18C99769298E4E2E00EDE784 /* MyTextWidget */,
 				183798692938EE0100B15D98 /* Frameworks */,
 				18D194972938EC86007E343C /* Products */,
 			);
@@ -210,6 +254,7 @@
 				183798682938EE0100B15D98 /* ViewSizeWidgetExtension.appex */,
 				18701D55295EE28800CA0F1E /* CountdownWidgetExtension.appex */,
 				18685FB3297EC8A500C690F7 /* DoggyWidgetExtension.appex */,
+				18C99766298E4E2D00EDE784 /* MyTextWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -288,6 +333,23 @@
 			productReference = 18701D55295EE28800CA0F1E /* CountdownWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		18C99765298E4E2C00EDE784 /* MyTextWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18C99777298E4E4000EDE784 /* Build configuration list for PBXNativeTarget "MyTextWidgetExtension" */;
+			buildPhases = (
+				18C99762298E4E2C00EDE784 /* Sources */,
+				18C99763298E4E2C00EDE784 /* Frameworks */,
+				18C99764298E4E2C00EDE784 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyTextWidgetExtension;
+			productName = MyTextWidgetExtension;
+			productReference = 18C99766298E4E2D00EDE784 /* MyTextWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		18D194952938EC86007E343C /* SwiftSenpai-Widget-Sample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18D194A42938EC8A007E343C /* Build configuration list for PBXNativeTarget "SwiftSenpai-Widget-Sample" */;
@@ -303,6 +365,7 @@
 				183798752938EE0400B15D98 /* PBXTargetDependency */,
 				18701D5F295EE29300CA0F1E /* PBXTargetDependency */,
 				18685FC1297EC8A800C690F7 /* PBXTargetDependency */,
+				18C99775298E4E3E00EDE784 /* PBXTargetDependency */,
 			);
 			name = "SwiftSenpai-Widget-Sample";
 			productName = "SwiftSenpai-Widget-Sample";
@@ -328,6 +391,9 @@
 					18701D54295EE28800CA0F1E = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
+					18C99765298E4E2C00EDE784 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					18D194952938EC86007E343C = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
@@ -350,6 +416,7 @@
 				183798672938EE0100B15D98 /* ViewSizeWidgetExtension */,
 				18701D54295EE28800CA0F1E /* CountdownWidgetExtension */,
 				18685FB2297EC8A500C690F7 /* DoggyWidgetExtension */,
+				18C99765298E4E2C00EDE784 /* MyTextWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -376,6 +443,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				18701D5C295EE29300CA0F1E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18C99764298E4E2C00EDE784 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18C99770298E4E3D00EDE784 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,11 +495,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		18C99762298E4E2C00EDE784 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18C99772298E4E3D00EDE784 /* MyTextWidget.intentdefinition in Sources */,
+				18C9976D298E4E2E00EDE784 /* MyTextWidget.swift in Sources */,
+				18C9976B298E4E2E00EDE784 /* MyTextWidgetBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18D194922938EC86007E343C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				18D1949C2938EC86007E343C /* ContentView.swift in Sources */,
+				18C99773298E4E3E00EDE784 /* MyTextWidget.intentdefinition in Sources */,
 				18D1949A2938EC86007E343C /* SwiftSenpai_Widget_SampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,6 +532,11 @@
 			isa = PBXTargetDependency;
 			target = 18701D54295EE28800CA0F1E /* CountdownWidgetExtension */;
 			targetProxy = 18701D5E295EE29300CA0F1E /* PBXContainerItemProxy */;
+		};
+		18C99775298E4E3E00EDE784 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18C99765298E4E2C00EDE784 /* MyTextWidgetExtension */;
+			targetProxy = 18C99774298E4E3E00EDE784 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -614,6 +705,62 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LeeKahSeng.SwiftSenpai-Widget-Sample.CountdownWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		18C99778298E4E4000EDE784 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QVEMCYHXHL;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyTextWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MyTextWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LeeKahSeng.SwiftSenpai-Widget-Sample.MyTextWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18C99779298E4E4000EDE784 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QVEMCYHXHL;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyTextWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MyTextWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LeeKahSeng.SwiftSenpai-Widget-Sample.MyTextWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -826,6 +973,15 @@
 			buildConfigurations = (
 				18701D62295EE29300CA0F1E /* Debug */,
 				18701D63295EE29300CA0F1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18C99777298E4E4000EDE784 /* Build configuration list for PBXNativeTarget "MyTextWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18C99778298E4E4000EDE784 /* Debug */,
+				18C99779298E4E4000EDE784 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
