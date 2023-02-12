@@ -37,7 +37,7 @@ struct MyTextTimelineProvider: IntentTimelineProvider {
        
         MyTextEntry(
             date: Date(),
-            myText: "Hello!",
+            myText: "Hello! 👋",
             fontSize: 15,
             borderColor: .clear
         )
