@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1813B88129A086FE00069A53 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1837986A2938EE0100B15D98 /* WidgetKit.framework */; };
+		1813B88229A086FE00069A53 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1837986C2938EE0200B15D98 /* SwiftUI.framework */; };
+		1813B88529A086FE00069A53 /* CryptoPriceWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813B88429A086FE00069A53 /* CryptoPriceWidgetBundle.swift */; };
+		1813B88729A086FE00069A53 /* CryptoPriceWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813B88629A086FE00069A53 /* CryptoPriceWidget.swift */; };
+		1813B88A29A086FF00069A53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1813B88929A086FF00069A53 /* Assets.xcassets */; };
+		1813B88C29A086FF00069A53 /* CryptoPriceWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 1813B88829A086FE00069A53 /* CryptoPriceWidget.intentdefinition */; };
+		1813B88D29A086FF00069A53 /* CryptoPriceWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 1813B88829A086FE00069A53 /* CryptoPriceWidget.intentdefinition */; };
+		1813B89029A086FF00069A53 /* CryptoPriceWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1813B88029A086FE00069A53 /* CryptoPriceWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1837986B2938EE0100B15D98 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1837986A2938EE0100B15D98 /* WidgetKit.framework */; };
 		1837986D2938EE0200B15D98 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1837986C2938EE0200B15D98 /* SwiftUI.framework */; };
 		183798702938EE0200B15D98 /* ViewSizeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837986F2938EE0200B15D98 /* ViewSizeWidget.swift */; };
@@ -42,6 +50,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1813B88E29A086FF00069A53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18D1948E2938EC86007E343C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1813B87F29A086FE00069A53;
+			remoteInfo = CryptoPriceWidgetExtension;
+		};
 		183798742938EE0400B15D98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 18D1948E2938EC86007E343C /* Project object */;
@@ -81,6 +96,7 @@
 			files = (
 				18701D60295EE29300CA0F1E /* CountdownWidgetExtension.appex in Embed Foundation Extensions */,
 				18C99776298E4E3E00EDE784 /* MyTextWidgetExtension.appex in Embed Foundation Extensions */,
+				1813B89029A086FF00069A53 /* CryptoPriceWidgetExtension.appex in Embed Foundation Extensions */,
 				183798762938EE0400B15D98 /* ViewSizeWidgetExtension.appex in Embed Foundation Extensions */,
 				18685FC2297EC8A800C690F7 /* DoggyWidgetExtension.appex in Embed Foundation Extensions */,
 			);
@@ -90,6 +106,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1813B88029A086FE00069A53 /* CryptoPriceWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CryptoPriceWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1813B88429A086FE00069A53 /* CryptoPriceWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPriceWidgetBundle.swift; sourceTree = "<group>"; };
+		1813B88629A086FE00069A53 /* CryptoPriceWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPriceWidget.swift; sourceTree = "<group>"; };
+		1813B88829A086FE00069A53 /* CryptoPriceWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = CryptoPriceWidget.intentdefinition; sourceTree = "<group>"; };
+		1813B88929A086FF00069A53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1813B88B29A086FF00069A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		183798682938EE0100B15D98 /* ViewSizeWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ViewSizeWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1837986A2938EE0100B15D98 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		1837986C2938EE0200B15D98 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -124,6 +146,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1813B87D29A086FE00069A53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1813B88229A086FE00069A53 /* SwiftUI.framework in Frameworks */,
+				1813B88129A086FE00069A53 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		183798652938EE0100B15D98 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -170,6 +201,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1813B88329A086FE00069A53 /* CryptoPriceWidget */ = {
+			isa = PBXGroup;
+			children = (
+				1813B88429A086FE00069A53 /* CryptoPriceWidgetBundle.swift */,
+				1813B88629A086FE00069A53 /* CryptoPriceWidget.swift */,
+				1813B88829A086FE00069A53 /* CryptoPriceWidget.intentdefinition */,
+				1813B88929A086FF00069A53 /* Assets.xcassets */,
+				1813B88B29A086FF00069A53 /* Info.plist */,
+			);
+			path = CryptoPriceWidget;
+			sourceTree = "<group>";
+		};
 		183798692938EE0100B15D98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +285,7 @@
 				18701D58295EE28800CA0F1E /* CountdownWidget */,
 				18685FB6297EC8A500C690F7 /* DoggyWidget */,
 				18C99769298E4E2E00EDE784 /* MyTextWidget */,
+				1813B88329A086FE00069A53 /* CryptoPriceWidget */,
 				183798692938EE0100B15D98 /* Frameworks */,
 				18D194972938EC86007E343C /* Products */,
 			);
@@ -255,6 +299,7 @@
 				18701D55295EE28800CA0F1E /* CountdownWidgetExtension.appex */,
 				18685FB3297EC8A500C690F7 /* DoggyWidgetExtension.appex */,
 				18C99766298E4E2D00EDE784 /* MyTextWidgetExtension.appex */,
+				1813B88029A086FE00069A53 /* CryptoPriceWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -282,6 +327,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1813B87F29A086FE00069A53 /* CryptoPriceWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1813B89329A086FF00069A53 /* Build configuration list for PBXNativeTarget "CryptoPriceWidgetExtension" */;
+			buildPhases = (
+				1813B87C29A086FE00069A53 /* Sources */,
+				1813B87D29A086FE00069A53 /* Frameworks */,
+				1813B87E29A086FE00069A53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CryptoPriceWidgetExtension;
+			productName = CryptoPriceWidgetExtension;
+			productReference = 1813B88029A086FE00069A53 /* CryptoPriceWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		183798672938EE0100B15D98 /* ViewSizeWidgetExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1837987A2938EE0400B15D98 /* Build configuration list for PBXNativeTarget "ViewSizeWidgetExtension" */;
@@ -366,6 +428,7 @@
 				18701D5F295EE29300CA0F1E /* PBXTargetDependency */,
 				18685FC1297EC8A800C690F7 /* PBXTargetDependency */,
 				18C99775298E4E3E00EDE784 /* PBXTargetDependency */,
+				1813B88F29A086FF00069A53 /* PBXTargetDependency */,
 			);
 			name = "SwiftSenpai-Widget-Sample";
 			productName = "SwiftSenpai-Widget-Sample";
@@ -382,6 +445,9 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					1813B87F29A086FE00069A53 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					183798672938EE0100B15D98 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
@@ -417,11 +483,20 @@
 				18701D54295EE28800CA0F1E /* CountdownWidgetExtension */,
 				18685FB2297EC8A500C690F7 /* DoggyWidgetExtension */,
 				18C99765298E4E2C00EDE784 /* MyTextWidgetExtension */,
+				1813B87F29A086FE00069A53 /* CryptoPriceWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1813B87E29A086FE00069A53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1813B88A29A086FF00069A53 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		183798662938EE0100B15D98 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -466,6 +541,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1813B87C29A086FE00069A53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1813B88729A086FE00069A53 /* CryptoPriceWidget.swift in Sources */,
+				1813B88529A086FE00069A53 /* CryptoPriceWidgetBundle.swift in Sources */,
+				1813B88C29A086FF00069A53 /* CryptoPriceWidget.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		183798642938EE0100B15D98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -512,12 +597,18 @@
 				18D1949C2938EC86007E343C /* ContentView.swift in Sources */,
 				18C99773298E4E3E00EDE784 /* MyTextWidget.intentdefinition in Sources */,
 				18D1949A2938EC86007E343C /* SwiftSenpai_Widget_SampleApp.swift in Sources */,
+				1813B88D29A086FF00069A53 /* CryptoPriceWidget.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1813B88F29A086FF00069A53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1813B87F29A086FE00069A53 /* CryptoPriceWidgetExtension */;
+			targetProxy = 1813B88E29A086FF00069A53 /* PBXContainerItemProxy */;
+		};
 		183798752938EE0400B15D98 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 183798672938EE0100B15D98 /* ViewSizeWidgetExtension */;
@@ -541,6 +632,62 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1813B89129A086FF00069A53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QVEMCYHXHL;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CryptoPriceWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CryptoPriceWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LeeKahSeng.SwiftSenpai-Widget-Sample.CryptoPriceWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1813B89229A086FF00069A53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QVEMCYHXHL;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CryptoPriceWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CryptoPriceWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LeeKahSeng.SwiftSenpai-Widget-Sample.CryptoPriceWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		183798782938EE0400B15D98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -950,6 +1097,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1813B89329A086FF00069A53 /* Build configuration list for PBXNativeTarget "CryptoPriceWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1813B89129A086FF00069A53 /* Debug */,
+				1813B89229A086FF00069A53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1837987A2938EE0400B15D98 /* Build configuration list for PBXNativeTarget "ViewSizeWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
