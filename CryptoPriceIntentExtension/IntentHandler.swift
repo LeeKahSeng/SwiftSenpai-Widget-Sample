@@ -9,12 +9,27 @@ import Intents
 
 class IntentHandler: INExtension, CryptoPriceConfigurationIntentHandling {
     
-    func provideSelectedCryptoOptionsCollection(for intent: CryptoPriceConfigurationIntent, with completion: @escaping (INObjectCollection<Crypto>?, Error?) -> Void) {
-        
-    }
-    
     func provideSelectedCryptoOptionsCollection(for intent: CryptoPriceConfigurationIntent) async throws -> INObjectCollection<Crypto> {
         
+        let assets = try await AssetFetcher.fetchTopTenAssets()
+        
+        // Transform `[Asset]` to `[Crypto]`
+        let cryptos = assets.map { asset in
+
+            let crypto = Crypto(
+                identifier: asset.id,
+                display: "\(asset.name) (\(asset.symbol))"
+            )
+            crypto.symbol = asset.symbol
+            
+            return crypto
+        }
+        
+        // Create a collection with the array of cryptos.
+        let collection = INObjectCollection(items: cryptos)
+        
+        // Return the collections
+        return collection
     }
     
     override func handler(for intent: INIntent) -> Any {

@@ -48,6 +48,7 @@
 		18C99772298E4E3D00EDE784 /* MyTextWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 18C9976E298E4E2E00EDE784 /* MyTextWidget.intentdefinition */; };
 		18C99773298E4E3E00EDE784 /* MyTextWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 18C9976E298E4E2E00EDE784 /* MyTextWidget.intentdefinition */; };
 		18C99776298E4E3E00EDE784 /* MyTextWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 18C99766298E4E2D00EDE784 /* MyTextWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		18D0505329A231A800F0381E /* AssetFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813B8DC29A11FA700069A53 /* AssetFetcher.swift */; };
 		18D1949A2938EC86007E343C /* SwiftSenpai_Widget_SampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D194992938EC86007E343C /* SwiftSenpai_Widget_SampleApp.swift */; };
 		18D1949C2938EC86007E343C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1949B2938EC86007E343C /* ContentView.swift */; };
 		18D1949E2938EC8A007E343C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D1949D2938EC8A007E343C /* Assets.xcassets */; };
@@ -625,6 +626,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D0505329A231A800F0381E /* AssetFetcher.swift in Sources */,
 				1813B8D329A0F64100069A53 /* IntentHandler.swift in Sources */,
 				1813B8DB29A0F89A00069A53 /* CryptoPriceWidget.intentdefinition in Sources */,
 			);

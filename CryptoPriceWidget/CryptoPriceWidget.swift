@@ -9,60 +9,81 @@ import WidgetKit
 import SwiftUI
 import Intents
 
-struct Provider: IntentTimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationIntent())
+struct CryptoPriceEntry: TimelineEntry {
+    let date: Date
+    let name: String
+    let symbol: String
+    let price: String
+}
+
+struct CryptoPriceWidgetView: View {
+    
+    let entry: CryptoPriceEntry
+    
+    var body: some View {
+        Text(entry.name)
+    }
+}
+
+struct CryptoPriceTimelineProvider: IntentTimelineProvider {
+    
+    func placeholder(in context: Context) -> CryptoPriceEntry {
+        
+        return CryptoPriceEntry(
+            date: Date(),
+            name: "Bitcoin",
+            symbol: "BTC",
+            price: "$10000"
+        )
     }
 
-    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), configuration: configuration)
+    func getSnapshot(for configuration: CryptoPriceConfigurationIntent,
+                     in context: Context,
+                     completion: @escaping (CryptoPriceEntry) -> ()) {
+        
+        let entry = CryptoPriceEntry(
+            date: Date(),
+            name: "Bitcoin",
+            symbol: "BTC",
+            price: "$10000"
+        )
+        
         completion(entry)
     }
 
-    func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
-            entries.append(entry)
-        }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
+    func getTimeline(for configuration: CryptoPriceConfigurationIntent,
+                     in context: Context,
+                     completion: @escaping (Timeline<CryptoPriceEntry>) -> ()) {
+        
+        let entry = CryptoPriceEntry(
+            date: Date(),
+            name: "Bitcoin",
+            symbol: "BTC",
+            price: "$10000"
+        )
+        
+        
+        let timeline = Timeline(entries: [entry], policy: .atEnd)
         completion(timeline)
     }
 }
 
-struct SimpleEntry: TimelineEntry {
-    let date: Date
-    let configuration: ConfigurationIntent
-}
-
-struct CryptoPriceWidgetEntryView : View {
-    var entry: Provider.Entry
-
-    var body: some View {
-        Text(entry.date, style: .time)
-    }
-}
-
 struct CryptoPriceWidget: Widget {
-    let kind: String = "CryptoPriceWidget"
-
+    
+    let kind = "com.SwiftSenpaiDemo.CryptoPriceWidget"
+    
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
-            CryptoPriceWidgetEntryView(entry: entry)
+        IntentConfiguration(
+            kind: kind,
+            intent: CryptoPriceConfigurationIntent.self,
+            provider: CryptoPriceTimelineProvider()
+        ) { entry in
+            CryptoPriceWidgetView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
-    }
-}
-
-struct CryptoPriceWidget_Previews: PreviewProvider {
-    static var previews: some View {
-        CryptoPriceWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        .configurationDisplayName("Crypto Price Widget")
+        .description("Get price for your selected asset")
+        .supportedFamilies([
+            .systemSmall,
+        ])
     }
 }

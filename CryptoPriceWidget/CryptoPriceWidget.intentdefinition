@@ -60,26 +60,6 @@
 							<key>INIntentParameterPromptDialogType</key>
 							<string>Primary</string>
 						</dict>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>There are ${count} options matching ‘${selectedCrypto}’.</string>
-							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>xVE8iK</string>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>DisambiguationIntroduction</string>
-						</dict>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>Just to confirm, you wanted ‘${selectedCrypto}’?</string>
-							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>wdbtxe</string>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>Confirmation</string>
-						</dict>
 					</array>
 					<key>INIntentParameterSupportsDynamicEnumeration</key>
 					<true/>
@@ -180,29 +160,15 @@
 				</dict>
 				<dict>
 					<key>INTypePropertyDisplayName</key>
-					<string>Id</string>
+					<string>Symbol</string>
 					<key>INTypePropertyDisplayNameID</key>
 					<string>URFlHT</string>
 					<key>INTypePropertyDisplayPriority</key>
 					<integer>5</integer>
 					<key>INTypePropertyName</key>
-					<string>id</string>
+					<string>symbol</string>
 					<key>INTypePropertyTag</key>
 					<integer>100</integer>
-					<key>INTypePropertyType</key>
-					<string>String</string>
-				</dict>
-				<dict>
-					<key>INTypePropertyDisplayName</key>
-					<string>Name</string>
-					<key>INTypePropertyDisplayNameID</key>
-					<string>J2DWLa</string>
-					<key>INTypePropertyDisplayPriority</key>
-					<integer>6</integer>
-					<key>INTypePropertyName</key>
-					<string>name</string>
-					<key>INTypePropertyTag</key>
-					<integer>101</integer>
 					<key>INTypePropertyType</key>
 					<string>String</string>
 				</dict>

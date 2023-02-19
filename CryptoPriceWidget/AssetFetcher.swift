@@ -10,12 +10,10 @@ import Foundation
 struct Asset: Codable {
     let id: String
     let name: String
+    let symbol: String
 }
 
 struct AssetDetails: Codable {
-    let id: String
-    let name: String
-    let symbol: String
     let priceUsd: String
     
     /// Formatted price value
