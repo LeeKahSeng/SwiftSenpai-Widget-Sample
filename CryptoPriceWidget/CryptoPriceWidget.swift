@@ -21,7 +21,15 @@ struct CryptoPriceWidgetView: View {
     let entry: CryptoPriceEntry
     
     var body: some View {
-        Text(entry.name)
+        VStack {
+            Text(entry.name)
+                .font(.title.weight(.bold))
+            Text(entry.symbol)
+                .font(.footnote)
+                .padding(.bottom, 8)
+            Text(entry.price)
+                .font(.title2.weight(.semibold))
+        }
     }
 }
 
@@ -55,15 +63,62 @@ struct CryptoPriceTimelineProvider: IntentTimelineProvider {
                      in context: Context,
                      completion: @escaping (Timeline<CryptoPriceEntry>) -> ()) {
         
+        // Extract required information from `configuration`
+        guard
+            let assetId = configuration.selectedCrypto?.identifier,
+            let name = configuration.selectedCrypto?.name,
+            let symbol = configuration.selectedCrypto?.symbol else {
+            
+            showEmptyState(completion: completion)
+            return
+        }
+        
+        Task {
+            
+            // Fetch asset details
+            guard let assetDetails = try? await AssetFetcher.fetchAssetDetails(id: assetId) else {
+                
+                showEmptyState(completion: completion)
+                return
+            }
+            
+            // Create `CryptoPriceEntry` using based on user selected configuration & fetched information
+            let entry = CryptoPriceEntry(
+                date: Date(),
+                name: name,
+                symbol: symbol,
+                price: assetDetails.price
+            )
+            
+            // Next fetch happens 15 minutes later
+            let nextUpdate = Calendar.current.date(
+                byAdding: DateComponents(minute: 15),
+                to: Date()
+            )!
+            
+            let timeline = Timeline(
+                entries: [entry],
+                policy: .after(nextUpdate)
+            )
+            
+            completion(timeline)
+        }
+    }
+    
+    private func showEmptyState(completion: @escaping (Timeline<CryptoPriceEntry>) -> ()) {
+        
         let entry = CryptoPriceEntry(
             date: Date(),
-            name: "Bitcoin",
-            symbol: "BTC",
-            price: "$10000"
+            name: "",
+            symbol: "Please select an asset",
+            price: ""
         )
         
-        
-        let timeline = Timeline(entries: [entry], policy: .atEnd)
+        // Trigger completion handler with dummy data
+        let timeline = Timeline(
+            entries: [entry],
+            policy: .never
+        )
         completion(timeline)
     }
 }

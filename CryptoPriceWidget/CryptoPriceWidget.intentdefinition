@@ -103,7 +103,7 @@
 			<key>INTypeDisplayNameID</key>
 			<string>iUBrdd</string>
 			<key>INTypeLastPropertyTag</key>
-			<integer>101</integer>
+			<integer>102</integer>
 			<key>INTypeName</key>
 			<string>Crypto</string>
 			<key>INTypeProperties</key>
@@ -169,6 +169,20 @@
 					<string>symbol</string>
 					<key>INTypePropertyTag</key>
 					<integer>100</integer>
+					<key>INTypePropertyType</key>
+					<string>String</string>
+				</dict>
+				<dict>
+					<key>INTypePropertyDisplayName</key>
+					<string>Name</string>
+					<key>INTypePropertyDisplayNameID</key>
+					<string>g9J3OL</string>
+					<key>INTypePropertyDisplayPriority</key>
+					<integer>6</integer>
+					<key>INTypePropertyName</key>
+					<string>name</string>
+					<key>INTypePropertyTag</key>
+					<integer>102</integer>
 					<key>INTypePropertyType</key>
 					<string>String</string>
 				</dict>

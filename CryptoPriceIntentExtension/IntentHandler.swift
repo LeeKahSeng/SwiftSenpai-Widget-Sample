@@ -21,6 +21,7 @@ class IntentHandler: INExtension, CryptoPriceConfigurationIntentHandling {
                 display: "\(asset.name) (\(asset.symbol))"
             )
             crypto.symbol = asset.symbol
+            crypto.name = asset.name
             
             return crypto
         }
