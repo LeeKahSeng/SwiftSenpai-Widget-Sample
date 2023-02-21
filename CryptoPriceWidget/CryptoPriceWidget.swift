@@ -90,18 +90,8 @@ struct CryptoPriceTimelineProvider: IntentTimelineProvider {
                 price: assetDetails.price
             )
             
-            // Next fetch happens 15 minutes later
-            let nextUpdate = Calendar.current.date(
-                byAdding: DateComponents(minute: 15),
-                to: Date()
-            )!
-            
-            let timeline = Timeline(
-                entries: [entry],
-                policy: .after(nextUpdate)
-            )
-            
-            completion(timeline)
+            // Trigger completion & next fetch happens 15 minutes later
+            executeTimelineCompletion(completion, timelineEntry: entry)
         }
     }
     
@@ -114,11 +104,24 @@ struct CryptoPriceTimelineProvider: IntentTimelineProvider {
             price: ""
         )
         
-        // Trigger completion handler with dummy data
+        // Trigger completion & next fetch happens 15 minutes later
+        executeTimelineCompletion(completion, timelineEntry: entry)
+    }
+    
+    func executeTimelineCompletion(_ completion: @escaping (Timeline<CryptoPriceEntry>) -> (),
+                                   timelineEntry: CryptoPriceEntry) {
+        
+        // Next fetch happens 15 minutes later
+        let nextUpdate = Calendar.current.date(
+            byAdding: DateComponents(minute: 15),
+            to: Date()
+        )!
+        
         let timeline = Timeline(
-            entries: [entry],
-            policy: .never
+            entries: [timelineEntry],
+            policy: .after(nextUpdate)
         )
+        
         completion(timeline)
     }
 }
