@@ -9,14 +9,16 @@ import Intents
 
 class IntentHandler: INExtension, CryptoPriceConfigurationIntentHandling {
     
-    func provideSelectedCryptoOptionsCollection(for intent: CryptoPriceConfigurationIntent) async throws -> INObjectCollection<Crypto> {
+    func provideSelectedCryptoOptionsCollection(
+        for intent: CryptoPriceConfigurationIntent
+    ) async throws -> INObjectCollection<Crypto> {
         
         // Fetch list of top ten crypto from API
         let assets = try await AssetFetcher.fetchTopTenAssets()
         
         // Transform `[Asset]` to `[Crypto]`
         let cryptos = assets.map { asset in
-
+            
             let crypto = Crypto(
                 identifier: asset.id,
                 display: "\(asset.name) (\(asset.symbol))"
