@@ -4,3 +4,4 @@
 - Sample project for article '[How to Update or Refresh a Widget?](https://swiftsenpai.com/development/refreshing-widget/)'.
 - Sample project for article '[How to Fetch and Show Remote Data on a Widget?](https://swiftsenpai.com/development/widget-load-remote-data/)'.
 - Sample project for article '[How to Create Configurable Widgets With Static Options?](https://swiftsenpai.com/development/configurable-widgets-static-options/)'.
+- Sample project for article '[How to Create Configurable Widgets With Dynamic Options?](https://swiftsenpai.com/development/configurable-widgets-dynamic-options/)'
