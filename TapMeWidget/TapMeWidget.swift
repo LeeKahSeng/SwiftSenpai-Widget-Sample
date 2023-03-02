@@ -12,6 +12,7 @@ import Intents
 struct TapMeWidgetEntry: TimelineEntry {
     let date: Date
     let backgroundColor: Color
+    let deeplinkCommand: String
 }
 
 struct TapMeWidgetView: View {
@@ -25,6 +26,7 @@ struct TapMeWidgetView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(entry.backgroundColor)
+        .widgetURL(URL(string: "tap-me-widget://\(entry.deeplinkCommand)"))
     }
 }
 
@@ -34,7 +36,8 @@ struct TapMeWidgetTimelineProvider: IntentTimelineProvider {
         
         TapMeWidgetEntry(
             date: Date(),
-            backgroundColor: Color(uiColor: .systemRed)
+            backgroundColor: Color(uiColor: .systemRed),
+            deeplinkCommand: ""
         )
     }
 
@@ -44,7 +47,8 @@ struct TapMeWidgetTimelineProvider: IntentTimelineProvider {
         
         let entry = TapMeWidgetEntry(
             date: Date(),
-            backgroundColor: Color(uiColor: .systemRed)
+            backgroundColor: Color(uiColor: .systemRed),
+            deeplinkCommand: ""
         )
 
         completion(entry)
@@ -54,11 +58,15 @@ struct TapMeWidgetTimelineProvider: IntentTimelineProvider {
                      in context: Context,
                      completion: @escaping (Timeline<TapMeWidgetEntry>) -> ()) {
         
-        let color = color(for: configuration.backgroundColor)
+        let backgroundColor = configuration.backgroundColor
+        
+        let color = color(for: backgroundColor)
+        let command = command(for: backgroundColor)
         
         let entry = TapMeWidgetEntry(
             date: Date(),
-            backgroundColor: color
+            backgroundColor: color,
+            deeplinkCommand: command
         )
         
         let timeline = Timeline(entries: [entry], policy: .atEnd)
@@ -76,6 +84,22 @@ struct TapMeWidgetTimelineProvider: IntentTimelineProvider {
             return Color(uiColor: .systemRed)
         case .orange:
             return Color(uiColor: .systemOrange)
+        case .unknown:
+            fatalError("Unknow color")
+        }
+    }
+    
+    /// Provide deeplink command
+    private func command(for bgColor: BgColor) -> String {
+        switch bgColor {
+        case .blue:
+            return "show-blue"
+        case .green:
+            return "show-green"
+        case .red:
+            return "show-red"
+        case .orange:
+            return "show-orange"
         case .unknown:
             fatalError("Unknow color")
         }

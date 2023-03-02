@@ -15,6 +15,7 @@
 		180EF01029B07A4C0080195E /* TapMeWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 180EF00C29B07A4B0080195E /* TapMeWidget.intentdefinition */; };
 		180EF01129B07A4C0080195E /* TapMeWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 180EF00C29B07A4B0080195E /* TapMeWidget.intentdefinition */; };
 		180EF01429B07A4C0080195E /* TapMeWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 180EF00429B07A4B0080195E /* TapMeWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		180EF01B29B098300080195E /* ColorViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EF01A29B098300080195E /* ColorViews.swift */; };
 		1813B88129A086FE00069A53 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1837986A2938EE0100B15D98 /* WidgetKit.framework */; };
 		1813B88229A086FE00069A53 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1837986C2938EE0200B15D98 /* SwiftUI.framework */; };
 		1813B88529A086FE00069A53 /* CryptoPriceWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813B88429A086FE00069A53 /* CryptoPriceWidgetBundle.swift */; };
@@ -143,6 +144,7 @@
 		180EF00C29B07A4B0080195E /* TapMeWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = TapMeWidget.intentdefinition; sourceTree = "<group>"; };
 		180EF00D29B07A4C0080195E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		180EF00F29B07A4C0080195E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		180EF01A29B098300080195E /* ColorViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViews.swift; sourceTree = "<group>"; };
 		1813B88029A086FE00069A53 /* CryptoPriceWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CryptoPriceWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1813B88429A086FE00069A53 /* CryptoPriceWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPriceWidgetBundle.swift; sourceTree = "<group>"; };
 		1813B88629A086FE00069A53 /* CryptoPriceWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPriceWidget.swift; sourceTree = "<group>"; };
@@ -396,6 +398,7 @@
 				18701D64295EE96700CA0F1E /* Info.plist */,
 				18D194992938EC86007E343C /* SwiftSenpai_Widget_SampleApp.swift */,
 				18D1949B2938EC86007E343C /* ContentView.swift */,
+				180EF01A29B098300080195E /* ColorViews.swift */,
 				18D1949D2938EC8A007E343C /* Assets.xcassets */,
 				18D1949F2938EC8A007E343C /* Preview Content */,
 			);
@@ -766,6 +769,7 @@
 				18D1949A2938EC86007E343C /* SwiftSenpai_Widget_SampleApp.swift in Sources */,
 				1813B88D29A086FF00069A53 /* CryptoPriceWidget.intentdefinition in Sources */,
 				1813B8DD29A11FA700069A53 /* AssetFetcher.swift in Sources */,
+				180EF01B29B098300080195E /* ColorViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
