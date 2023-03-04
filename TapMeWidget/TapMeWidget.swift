@@ -118,8 +118,8 @@ struct TapMeWidget: Widget {
         ) { entry in
             TapMeWidgetView(entry: entry)
         }
-        .configurationDisplayName("MyText Widget")
-        .description("Show you favorite text!")
+        .configurationDisplayName("Tap Me Widget")
+        .description("Please tap me!")
         .supportedFamilies([
             .systemSmall,
             .systemMedium,
