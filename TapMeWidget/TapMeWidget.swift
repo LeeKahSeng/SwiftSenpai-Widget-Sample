@@ -73,22 +73,6 @@ struct TapMeWidgetTimelineProvider: IntentTimelineProvider {
         completion(timeline)
     }
     
-    /// Convert `BgColor` to `Color`
-    private func color(for bgColor: BgColor) -> Color {
-        switch bgColor {
-        case .blue:
-            return Color(uiColor: .systemBlue)
-        case .green:
-            return Color(uiColor: .systemGreen)
-        case .red:
-            return Color(uiColor: .systemRed)
-        case .orange:
-            return Color(uiColor: .systemOrange)
-        case .unknown:
-            fatalError("Unknow color")
-        }
-    }
-    
     /// Provide deeplink command
     private func command(for bgColor: BgColor) -> String {
         switch bgColor {
@@ -100,6 +84,22 @@ struct TapMeWidgetTimelineProvider: IntentTimelineProvider {
             return "show-red"
         case .orange:
             return "show-orange"
+        case .unknown:
+            fatalError("Unknow color")
+        }
+    }
+    
+    /// Convert `BgColor` to `Color`
+    private func color(for bgColor: BgColor) -> Color {
+        switch bgColor {
+        case .blue:
+            return Color(uiColor: .systemBlue)
+        case .green:
+            return Color(uiColor: .systemGreen)
+        case .red:
+            return Color(uiColor: .systemRed)
+        case .orange:
+            return Color(uiColor: .systemOrange)
         case .unknown:
             fatalError("Unknow color")
         }
