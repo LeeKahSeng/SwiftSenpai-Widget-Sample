@@ -12,7 +12,7 @@ import Intents
 struct TapMeWidgetEntry: TimelineEntry {
     let date: Date
     let backgroundColor: Color
-    let deeplinkCommand: String
+    let deepLinkCommand: String
 }
 
 struct TapMeWidgetView: View {
@@ -26,7 +26,7 @@ struct TapMeWidgetView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(entry.backgroundColor)
-        .widgetURL(URL(string: "tap-me-widget://\(entry.deeplinkCommand)"))
+        .widgetURL(URL(string: "tap-me-widget://\(entry.deepLinkCommand)"))
     }
 }
 
@@ -37,7 +37,7 @@ struct TapMeWidgetTimelineProvider: IntentTimelineProvider {
         TapMeWidgetEntry(
             date: Date(),
             backgroundColor: Color(uiColor: .systemRed),
-            deeplinkCommand: ""
+            deepLinkCommand: ""
         )
     }
 
@@ -48,7 +48,7 @@ struct TapMeWidgetTimelineProvider: IntentTimelineProvider {
         let entry = TapMeWidgetEntry(
             date: Date(),
             backgroundColor: Color(uiColor: .systemRed),
-            deeplinkCommand: ""
+            deepLinkCommand: ""
         )
 
         completion(entry)
@@ -60,20 +60,23 @@ struct TapMeWidgetTimelineProvider: IntentTimelineProvider {
         
         let backgroundColor = configuration.backgroundColor
         
+        // Convert `BgColor` to `Color`
         let color = color(for: backgroundColor)
+
+        // Get deep link comand based on `backgroundColor`
         let command = command(for: backgroundColor)
         
         let entry = TapMeWidgetEntry(
             date: Date(),
             backgroundColor: color,
-            deeplinkCommand: command
+            deepLinkCommand: command
         )
         
         let timeline = Timeline(entries: [entry], policy: .atEnd)
         completion(timeline)
     }
     
-    /// Provide deeplink command
+    /// Provide deep link command
     private func command(for bgColor: BgColor) -> String {
         switch bgColor {
         case .blue:
@@ -118,7 +121,7 @@ struct TapMeWidget: Widget {
         ) { entry in
             TapMeWidgetView(entry: entry)
         }
-        .configurationDisplayName("Tap Me Widget")
+        .configurationDisplayName("'Tap Me' Widget")
         .description("Please tap me!")
         .supportedFamilies([
             .systemSmall,

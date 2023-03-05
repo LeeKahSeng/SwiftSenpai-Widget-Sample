@@ -36,25 +36,27 @@ struct ContentView: View {
             BlueView()
         }
         .onOpenURL { url in
-            handleWidgetDeeplink(url)
+            // Handle this deep link URL
+            handleWidgetDeepLink(url)
         }
     }
     
-    private func handleWidgetDeeplink(_ url: URL) {
+    /// Extract deep link command from URL
+    private func handleWidgetDeepLink(_ url: URL) {
         
         guard
             let scheme = url.scheme,
-            let host = url.host else {
+            let command = url.host else {
             // Invalid URL format
             return
         }
         
         guard scheme == "tap-me-widget" else {
-            // The deeplink is not trigger by widget
+            // The deep link is not trigger by widget
             return
         }
         
-        switch host {
+        switch command {
         case "show-red":
             showRedView = true
         case "show-blue":
@@ -66,7 +68,6 @@ struct ContentView: View {
         default:
             break
         }
-        
     }
 }
 
