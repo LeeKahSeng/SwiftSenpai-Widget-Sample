@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180EF00529B07A4B0080195E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1837986A2938EE0100B15D98 /* WidgetKit.framework */; };
+		180EF00629B07A4B0080195E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1837986C2938EE0200B15D98 /* SwiftUI.framework */; };
+		180EF00929B07A4B0080195E /* TapMeWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EF00829B07A4B0080195E /* TapMeWidgetBundle.swift */; };
+		180EF00B29B07A4B0080195E /* TapMeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EF00A29B07A4B0080195E /* TapMeWidget.swift */; };
+		180EF00E29B07A4C0080195E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180EF00D29B07A4C0080195E /* Assets.xcassets */; };
+		180EF01029B07A4C0080195E /* TapMeWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 180EF00C29B07A4B0080195E /* TapMeWidget.intentdefinition */; };
+		180EF01129B07A4C0080195E /* TapMeWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 180EF00C29B07A4B0080195E /* TapMeWidget.intentdefinition */; };
+		180EF01429B07A4C0080195E /* TapMeWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 180EF00429B07A4B0080195E /* TapMeWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		180EF01B29B098300080195E /* ColorViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180EF01A29B098300080195E /* ColorViews.swift */; };
 		1813B88129A086FE00069A53 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1837986A2938EE0100B15D98 /* WidgetKit.framework */; };
 		1813B88229A086FE00069A53 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1837986C2938EE0200B15D98 /* SwiftUI.framework */; };
 		1813B88529A086FE00069A53 /* CryptoPriceWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1813B88429A086FE00069A53 /* CryptoPriceWidgetBundle.swift */; };
@@ -57,6 +66,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		180EF01229B07A4C0080195E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18D1948E2938EC86007E343C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 180EF00329B07A4B0080195E;
+			remoteInfo = TapMeWidgetExtension;
+		};
 		1813B88E29A086FF00069A53 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 18D1948E2938EC86007E343C /* Project object */;
@@ -113,6 +129,7 @@
 				1813B89029A086FF00069A53 /* CryptoPriceWidgetExtension.appex in Embed Foundation Extensions */,
 				183798762938EE0400B15D98 /* ViewSizeWidgetExtension.appex in Embed Foundation Extensions */,
 				1813B8D729A0F64100069A53 /* CryptoPriceIntentExtension.appex in Embed Foundation Extensions */,
+				180EF01429B07A4C0080195E /* TapMeWidgetExtension.appex in Embed Foundation Extensions */,
 				18685FC2297EC8A800C690F7 /* DoggyWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -121,6 +138,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		180EF00429B07A4B0080195E /* TapMeWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TapMeWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		180EF00829B07A4B0080195E /* TapMeWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapMeWidgetBundle.swift; sourceTree = "<group>"; };
+		180EF00A29B07A4B0080195E /* TapMeWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapMeWidget.swift; sourceTree = "<group>"; };
+		180EF00C29B07A4B0080195E /* TapMeWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = TapMeWidget.intentdefinition; sourceTree = "<group>"; };
+		180EF00D29B07A4C0080195E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		180EF00F29B07A4C0080195E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		180EF01A29B098300080195E /* ColorViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViews.swift; sourceTree = "<group>"; };
 		1813B88029A086FE00069A53 /* CryptoPriceWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CryptoPriceWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1813B88429A086FE00069A53 /* CryptoPriceWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPriceWidgetBundle.swift; sourceTree = "<group>"; };
 		1813B88629A086FE00069A53 /* CryptoPriceWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPriceWidget.swift; sourceTree = "<group>"; };
@@ -166,6 +190,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		180EF00129B07A4B0080195E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				180EF00629B07A4B0080195E /* SwiftUI.framework in Frameworks */,
+				180EF00529B07A4B0080195E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1813B87D29A086FE00069A53 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,6 +262,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180EF00729B07A4B0080195E /* TapMeWidget */ = {
+			isa = PBXGroup;
+			children = (
+				180EF00829B07A4B0080195E /* TapMeWidgetBundle.swift */,
+				180EF00A29B07A4B0080195E /* TapMeWidget.swift */,
+				180EF00C29B07A4B0080195E /* TapMeWidget.intentdefinition */,
+				180EF00D29B07A4C0080195E /* Assets.xcassets */,
+				180EF00F29B07A4C0080195E /* Info.plist */,
+			);
+			path = TapMeWidget;
+			sourceTree = "<group>";
+		};
 		1813B88329A086FE00069A53 /* CryptoPriceWidget */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +371,7 @@
 				18C99769298E4E2E00EDE784 /* MyTextWidget */,
 				1813B88329A086FE00069A53 /* CryptoPriceWidget */,
 				1813B8D129A0F64100069A53 /* CryptoPriceIntentExtension */,
+				180EF00729B07A4B0080195E /* TapMeWidget */,
 				183798692938EE0100B15D98 /* Frameworks */,
 				18D194972938EC86007E343C /* Products */,
 			);
@@ -341,6 +387,7 @@
 				18C99766298E4E2D00EDE784 /* MyTextWidgetExtension.appex */,
 				1813B88029A086FE00069A53 /* CryptoPriceWidgetExtension.appex */,
 				1813B8CE29A0F64100069A53 /* CryptoPriceIntentExtension.appex */,
+				180EF00429B07A4B0080195E /* TapMeWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -351,6 +398,7 @@
 				18701D64295EE96700CA0F1E /* Info.plist */,
 				18D194992938EC86007E343C /* SwiftSenpai_Widget_SampleApp.swift */,
 				18D1949B2938EC86007E343C /* ContentView.swift */,
+				180EF01A29B098300080195E /* ColorViews.swift */,
 				18D1949D2938EC8A007E343C /* Assets.xcassets */,
 				18D1949F2938EC8A007E343C /* Preview Content */,
 			);
@@ -368,6 +416,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		180EF00329B07A4B0080195E /* TapMeWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 180EF01729B07A4C0080195E /* Build configuration list for PBXNativeTarget "TapMeWidgetExtension" */;
+			buildPhases = (
+				180EF00029B07A4B0080195E /* Sources */,
+				180EF00129B07A4B0080195E /* Frameworks */,
+				180EF00229B07A4B0080195E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TapMeWidgetExtension;
+			productName = TapMeWidgetExtension;
+			productReference = 180EF00429B07A4B0080195E /* TapMeWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		1813B87F29A086FE00069A53 /* CryptoPriceWidgetExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1813B89329A086FF00069A53 /* Build configuration list for PBXNativeTarget "CryptoPriceWidgetExtension" */;
@@ -488,6 +553,7 @@
 				18C99775298E4E3E00EDE784 /* PBXTargetDependency */,
 				1813B88F29A086FF00069A53 /* PBXTargetDependency */,
 				1813B8D629A0F64100069A53 /* PBXTargetDependency */,
+				180EF01329B07A4C0080195E /* PBXTargetDependency */,
 			);
 			name = "SwiftSenpai-Widget-Sample";
 			productName = "SwiftSenpai-Widget-Sample";
@@ -504,6 +570,9 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					180EF00329B07A4B0080195E = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					1813B87F29A086FE00069A53 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -547,11 +616,20 @@
 				18C99765298E4E2C00EDE784 /* MyTextWidgetExtension */,
 				1813B87F29A086FE00069A53 /* CryptoPriceWidgetExtension */,
 				1813B8CD29A0F64100069A53 /* CryptoPriceIntentExtension */,
+				180EF00329B07A4B0080195E /* TapMeWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		180EF00229B07A4B0080195E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				180EF00E29B07A4C0080195E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1813B87E29A086FE00069A53 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -611,6 +689,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		180EF00029B07A4B0080195E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				180EF01029B07A4C0080195E /* TapMeWidget.intentdefinition in Sources */,
+				180EF00929B07A4B0080195E /* TapMeWidgetBundle.swift in Sources */,
+				180EF00B29B07A4B0080195E /* TapMeWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1813B87C29A086FE00069A53 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -675,17 +763,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180EF01129B07A4C0080195E /* TapMeWidget.intentdefinition in Sources */,
 				18D1949C2938EC86007E343C /* ContentView.swift in Sources */,
 				18C99773298E4E3E00EDE784 /* MyTextWidget.intentdefinition in Sources */,
 				18D1949A2938EC86007E343C /* SwiftSenpai_Widget_SampleApp.swift in Sources */,
 				1813B88D29A086FF00069A53 /* CryptoPriceWidget.intentdefinition in Sources */,
 				1813B8DD29A11FA700069A53 /* AssetFetcher.swift in Sources */,
+				180EF01B29B098300080195E /* ColorViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		180EF01329B07A4C0080195E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 180EF00329B07A4B0080195E /* TapMeWidgetExtension */;
+			targetProxy = 180EF01229B07A4C0080195E /* PBXContainerItemProxy */;
+		};
 		1813B88F29A086FF00069A53 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1813B87F29A086FE00069A53 /* CryptoPriceWidgetExtension */;
@@ -719,6 +814,62 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		180EF01529B07A4C0080195E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TapMeWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TapMeWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LeeKahSeng.SwiftSenpai-Widget-Sample.TapMeWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		180EF01629B07A4C0080195E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TapMeWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TapMeWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LeeKahSeng.SwiftSenpai-Widget-Sample.TapMeWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		1813B89129A086FF00069A53 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1284,6 +1435,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		180EF01729B07A4C0080195E /* Build configuration list for PBXNativeTarget "TapMeWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				180EF01529B07A4C0080195E /* Debug */,
+				180EF01629B07A4C0080195E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1813B89329A086FF00069A53 /* Build configuration list for PBXNativeTarget "CryptoPriceWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
