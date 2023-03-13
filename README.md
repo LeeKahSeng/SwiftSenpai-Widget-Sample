@@ -5,3 +5,4 @@
 - Sample project for article '[How to Fetch and Show Remote Data on a Widget?](https://swiftsenpai.com/development/widget-load-remote-data/)'.
 - Sample project for article '[How to Create Configurable Widgets With Static Options?](https://swiftsenpai.com/development/configurable-widgets-static-options/)'.
 - Sample project for article '[How to Create Configurable Widgets With Dynamic Options?](https://swiftsenpai.com/development/configurable-widgets-dynamic-options/)'
+- Sample project for article '[How to Handle Tap Gestures on Widgets?](https://swiftsenpai.com/development/widget-tap-gestures/)'.
