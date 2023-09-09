@@ -30,6 +30,7 @@ struct CryptoPriceWidgetView: View {
             Text(entry.price)
                 .font(.title2.weight(.semibold))
         }
+        .containerBackground(for: .widget) { }
     }
 }
 
@@ -144,4 +145,15 @@ struct CryptoPriceWidget: Widget {
             .systemSmall,
         ])
     }
+}
+
+#Preview(as: .systemSmall) {
+    CryptoPriceWidget()
+} timeline: {
+    CryptoPriceEntry(
+        date: Date(),
+        name: "Bitcoin",
+        symbol: "BTC",
+        price: "$12345"
+    )
 }
