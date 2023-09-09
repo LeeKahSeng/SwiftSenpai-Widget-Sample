@@ -94,5 +94,6 @@ struct DoggyWidget: Widget {
         .supportedFamilies([
             .systemSmall,
         ])
+        .contentMarginsDisabled()
     }
 }
