@@ -24,7 +24,6 @@ struct TapMeWidgetView: View {
             Text("Tap Me!")
                 .font(.title)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .widgetURL(URL(string: "tap-me-widget://\(entry.deepLinkCommand)"))
         .containerBackground(for: .widget) {
             entry.backgroundColor
