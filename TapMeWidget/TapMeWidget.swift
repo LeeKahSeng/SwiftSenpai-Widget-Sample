@@ -24,9 +24,10 @@ struct TapMeWidgetView: View {
             Text("Tap Me!")
                 .font(.title)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(entry.backgroundColor)
         .widgetURL(URL(string: "tap-me-widget://\(entry.deepLinkCommand)"))
+        .containerBackground(for: .widget) {
+            entry.backgroundColor
+        }
     }
 }
 
@@ -129,3 +130,14 @@ struct TapMeWidget: Widget {
         ])
     }
 }
+
+#Preview(as: .systemSmall) {
+    TapMeWidget()
+} timeline: {
+    TapMeWidgetEntry(
+        date: Date(),
+        backgroundColor: Color(uiColor: .systemYellow),
+        deepLinkCommand: ""
+    )
+}
+

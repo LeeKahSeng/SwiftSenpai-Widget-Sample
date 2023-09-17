@@ -87,9 +87,8 @@ struct ViewSizeWidget: Widget {
     }
 }
 
-struct ViewSizeWidget_Previews: PreviewProvider {
-    static var previews: some View {
-        ViewSizeWidgetView(entry: ViewSizeEntry(date: Date(), providerInfo: "preview"))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
-    }
+#Preview(as: .systemSmall) {
+    ViewSizeWidget()
+} timelineProvider: {
+    ViewSizeTimelineProvider()
 }

@@ -23,6 +23,7 @@ struct RectangularWidgetView: View {
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
             }
+            .containerBackground(for: .widget) { }
         }
     }
 }

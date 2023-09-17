@@ -25,8 +25,10 @@ struct HomeScreenWidgetView: View {
                 Text(entry.providerInfo)
                     .font(.footnote)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.green)
+            .containerBackground(for: .widget) {
+                Color.green
+            }
+            
         }
     }
 }

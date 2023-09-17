@@ -41,6 +41,7 @@ struct CountdownWidgetView: View {
                 .font(.caption)
                 .foregroundColor(Color(.systemGray))
         }
+        .containerBackground(for: .widget) { }
     }
     
     private func getFutureDate() -> Date {
@@ -126,5 +127,12 @@ struct CountdownWidget: Widget {
         .supportedFamilies([
             .systemSmall,
         ])
+        .contentMarginsDisabled()
     }
+}
+
+#Preview(as: .systemSmall) {
+    CountdownWidget()
+} timelineProvider: {
+    CountdownTimelineProvider()
 }

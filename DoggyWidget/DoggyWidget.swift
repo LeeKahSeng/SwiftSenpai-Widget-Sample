@@ -22,6 +22,7 @@ struct DoggyWidgetView: View {
             .resizable()
             .scaledToFill()
             .clipped()
+            .containerBackground(for: .widget) { }
     }
 }
 
@@ -94,5 +95,12 @@ struct DoggyWidget: Widget {
         .supportedFamilies([
             .systemSmall,
         ])
+        .contentMarginsDisabled()
     }
 }
+
+#Preview(as: .systemSmall, widget: {
+    DoggyWidget()
+}, timeline: {
+    DoggyEntry(date: Date(), image: UIImage(named: "sample-doggy")!)
+})

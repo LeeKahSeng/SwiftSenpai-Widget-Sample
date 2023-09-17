@@ -23,6 +23,7 @@ struct CircularWidgetView: View {
                         .font(.headline)
                 }
             }
+            .containerBackground(for: .widget) { }
         }
     }
 }

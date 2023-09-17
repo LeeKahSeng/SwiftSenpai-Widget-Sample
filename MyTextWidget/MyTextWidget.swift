@@ -28,6 +28,7 @@ struct MyTextWidgetView: View {
                 RoundedRectangle(cornerRadius: 6)
                     .stroke(entry.borderColor, lineWidth: 2)
             )
+            .containerBackground(for: .widget) { }
     }
 }
 
@@ -115,4 +116,15 @@ struct MyTextWidget: Widget {
             .systemSmall,
         ])
     }
+}
+
+#Preview(as: .systemSmall) {
+    MyTextWidget()
+} timeline: {
+    MyTextEntry(
+        date: Date(),
+        myText: "Preview 👋",
+        fontSize: 18,
+        borderColor: .blue
+    )
 }
